@@ -16,8 +16,42 @@ public class Main {
         }
         catch (IOException e){};
     }*/
-        //Trzeba zrobić dwie klasy: jedna która odczytuje inty z tabeli a druga która je czyta
-        int[][][] tableOne = new int[1][2][3];
+        //Trzeba zrobić dwie klasy: jedna która wpisuje inty z tabeli a druga która je czyta
+        {
+            FileOutputStream fos = null;
+
+
+            {
+                try {
+                    fos = new FileOutputStream("tabela.txt");
+                } catch (FileNotFoundException e1) {
+                    e1.printStackTrace();
+                }
+                BufferedWriter bw = null;
+                try {
+                    bw = new BufferedWriter(new OutputStreamWriter(fos, "UTF-8"));
+                } catch (UnsupportedEncodingException e1) {
+                    e1.printStackTrace();
+                }
+                int x [][] = {
+                        {0,2,3},
+                        {4,5,6},
+                };
+                try {
+                    bw.write(x.);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                try {
+                    bw.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+
+            }
+
+        }
+
 
     }
 }
