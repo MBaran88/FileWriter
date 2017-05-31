@@ -37,6 +37,7 @@ public class Main {
                         {0,2,3},
                         {4,5,6},
                 };
+                x.
                 try {
                     bw.write(x.toString());
                 } catch (IOException e1) {
@@ -47,8 +48,6 @@ public class Main {
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
-
-
             }
 
             FileInputStream fis = null;
