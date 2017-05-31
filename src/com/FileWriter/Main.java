@@ -1,5 +1,7 @@
 package com.FileWriter;
 
+import javafx.scene.control.Tab;
+
 import java.io.*;
 
 public class Main {
@@ -15,35 +17,7 @@ public class Main {
         catch (IOException e){};
     }*/
         //Trzeba zrobić dwie klasy: jedna która odczytuje inty z tabeli a druga która je czyta
-        FileInputStream fis = null;
-        FileOutputStream fos = null;
+        int[][][] tableOne = new int[1][2][3];
 
-        try{
-            fos = new FileOutputStream("xxx.txt");
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos,"UTF-8"));
-            bw.write("xxxąęść");
-            bw.close();
-
-            fis = new FileInputStream("xxx.txt");
-            BufferedReader br = new BufferedReader(new InputStreamReader(fis,"UTF-8"));
-            String line = br.readLine();
-            System.out.println(line);
-            br.close();
-        }
-        catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
-        catch (UnsupportedEncodingException e){
-            e.printStackTrace();
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
     }
 }
-
-
-
-
-
-
